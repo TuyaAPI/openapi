@@ -1,7 +1,7 @@
 {
   "name": "@tuyapi/openapi",
   "version": "0.1.0",
-  "description": "",
+  "description": "🚪 a wrapper for Tuya's OpenAPI",
   "main": "dist/api.js",
   "files": [
     "dist/"
@@ -32,6 +32,14 @@
     "document": "typedoc --out docs src"
   },
   "author": "Max Isom <hi@maxisom.me> (https://maxisom.me/)",
+  "homepage": "https://github.com/TuyaAPI/openapi#readme",
+  "bugs": {
+    "url": "https://github.com/TuyaAPI/openapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuyaAPI/openapi.git"
+  },
   "license": "MIT",
   "xo": {
     "ignores": [
