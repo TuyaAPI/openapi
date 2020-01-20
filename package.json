@@ -57,7 +57,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run build && git add docs && git commit --no-verify"
+      "pre-commit": "npm test && npm run build"
     }
   },
   "publishConfig": {

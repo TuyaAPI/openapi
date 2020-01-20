@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- stable
+script:
+- npm run travis
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: code+tuyapinpm@maxisom.me
+  api_key:
+    secure: UPdqs8gF5FCIFTX8Nrt+yapnbOE7uw6i5zVyCQApB1OKplLHc3jenHcgkoXO5wl9XmAOLBeCkGjcHML+1dLhVsQ7quDXzRlyYsj4MUaIaRP6qGBZlD8k1A/0MZAGjyQKFbomaRe3jx8CjyNqdWjiIG/rBjbq2TdZbHlxTw5mgZTbqBG4phD6ybuabH0VLKyyYlL5EKeRlaaHiwG07ORSl3+7Vc0C1SG9lneog4JKgocrC3Fg4oqejZvhHYBv6Vgb2wUn2h/Yh7yPoyPaHkWW66V947eK0z0hDJ//wJw71dtilSXqmnrQgUbyBRaV6IFZS57AYiaaPaMl4Pf73ggWzrAaU7gOKNYDtLXslI22bmYkQcfgIzOJZQDaH4YuYbSlp39tHrexeJPjL1leKx04uSg7X2s4/RWcRGZhR/dA8cqX+gGTuof3l4DE6gsI8HkSu3UTP7sCgDmFGNf7eSfHALYzcZwbcZGpL8Zmm6628JDD4E+QDpSi+OrVQCRmXEG8kHHYknaM9oqSkrYiepwhIhUiqLy4/dpQxPcQ91I5JveGRHNaEFTs5eN+xt3MuzkxImBuw2i/HT4LDOz+IoEzuVrEEkqsl/aeR9JFPx8e02HM7L3R4MZqdKnQjyMDa+SxCw7iH6ctydtqoHvbm0jgZlpYkQxwnsoWksfKRV36czU=
+  on:
+    tags: true
+    repo: TuyaAPI/openapi
+    branch: master
