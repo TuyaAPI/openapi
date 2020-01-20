@@ -1,0 +1,61 @@
+{
+  "name": "@tuyapi/openapi",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/api.js",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "got": "^10.2.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.16.0",
+    "@typescript-eslint/parser": "2.16.0",
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "eslint-config-xo-typescript": "0.24.1",
+    "husky": "4.0.10",
+    "typescript": "3.7.5",
+    "xo": "0.25.3"
+  },
+  "scripts": {
+    "lint": "xo",
+    "lint-fix": "xo --fix",
+    "test": "npm run lint",
+    "babel": "babel dist -d dist",
+    "build": "tsc && npm run babel",
+    "watch": "tsc --watch",
+    "prepack": "npm run build",
+    "travis": "npm test && npm run build"
+  },
+  "author": "Max Isom <hi@maxisom.me> (https://maxisom.me/)",
+  "license": "MIT",
+  "xo": {
+    "space": true,
+    "extends": "xo-typescript",
+    "rules": {
+      "@typescript-eslint/indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "@typescript-eslint/camelcase": [
+        0
+      ]
+    },
+    "extensions": [
+      "ts"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && npm run build"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
