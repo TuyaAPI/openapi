@@ -16,6 +16,7 @@
     "babel-preset-env": "1.7.0",
     "eslint-config-xo-typescript": "0.24.1",
     "husky": "4.0.10",
+    "typedoc": "^0.16.7",
     "typescript": "3.7.5",
     "xo": "0.25.3"
   },
@@ -24,14 +25,18 @@
     "lint-fix": "xo --fix",
     "test": "npm run lint",
     "babel": "babel dist -d dist",
-    "build": "tsc && npm run babel",
+    "build": "tsc && npm run babel && npm run document",
     "watch": "tsc --watch",
     "prepack": "npm run build",
-    "travis": "npm test && npm run build"
+    "travis": "npm test && npm run build",
+    "document": "typedoc --out docs src"
   },
   "author": "Max Isom <hi@maxisom.me> (https://maxisom.me/)",
   "license": "MIT",
   "xo": {
+    "ignores": [
+      "docs"
+    ],
     "space": true,
     "extends": "xo-typescript",
     "rules": {
@@ -52,7 +57,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && npm run build"
+      "pre-commit": "npm test && npm run build && git add docs && git commit --no-verify"
     }
   },
   "publishConfig": {
