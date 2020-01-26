@@ -31,7 +31,7 @@ class OpenAPI {
       responseType: 'json',
       prefixUrl: 'https://openapi.tuyaus.com/v1.0/',
       headers: {
-        _client_id: this._key,
+        client_id: this._key,
         sign_method: 'HMAC-SHA256'
       },
       hooks: {
@@ -50,7 +50,7 @@ class OpenAPI {
             if (this.tokenAccess === '') {
               sign = crypto
                 .createHmac('sha256', this._secret)
-                .update(`${this._key}${now}`)
+                .update(this._key + now.toString())
                 .digest('hex').toUpperCase();
             } else {
               sign = crypto
