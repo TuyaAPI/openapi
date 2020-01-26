@@ -42,3 +42,5 @@ const api = new OpenAPI({key: '10101010', secret: '1010101010', schema: '1010101
   console.log(await api.getDevicesByToken('EkjQjlbo'));
 })();
 ```
+
+## [Docs](https://tuyaapi.github.io/openapi/)
