@@ -153,6 +153,16 @@ class OpenAPI {
 
     return res.body as unknown as object;
   }
+
+  async getDevices(ids: string[]): Promise<object> {
+    const res = await this._client.get('devices', {
+      searchParams: {
+        device_ids: ids.toString()
+      }
+    });
+
+    return res.body as unknown as object;
+  }
 }
 
 module.exports = OpenAPI;
