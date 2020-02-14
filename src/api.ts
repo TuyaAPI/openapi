@@ -18,7 +18,7 @@ class OpenAPI {
   private readonly _key: string;
   private readonly _secret: string;
 
-  constructor({key, secret, schema}: {key: string; secret: string; schema: string}) {
+  constructor({key, secret, schema, region = 'us'}: {key: string; secret: string; schema: string; region: string}) {
     this.tokenAccess = '';
     this.tokenRefresh = '';
     this.tokenExpiresAt = new Date();
@@ -29,7 +29,7 @@ class OpenAPI {
 
     this._client = got.extend({
       responseType: 'json',
-      prefixUrl: 'https://openapi.tuyaus.com/v1.0/',
+      prefixUrl: `https://openapi.tuya${region}.com/v1.0/`,
       headers: {
         client_id: this._key,
         sign_method: 'HMAC-SHA256'
