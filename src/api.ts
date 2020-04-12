@@ -154,12 +154,18 @@ class OpenAPI {
     return res.body as unknown as object;
   }
 
-  async getDevices(ids: string[]): Promise<object> {
-    const res = await this._client.get('devices', {
-      searchParams: {
-        device_ids: ids.toString()
-      }
-    });
+  async getDevices({ids, pageNumber = 0, pageSize = 100}: {ids?: string[]; pageNumber: number; pageSize: number} = {pageNumber: 0, pageSize: 100}): Promise<object> {
+    const searchParams: any = {
+      schema: this.schema,
+      page_no: pageNumber,
+      page_size: pageSize
+    };
+
+    if (ids) {
+      searchParams.device_ids = ids.toString();
+    }
+
+    const res = await this._client.get('devices', {searchParams});
 
     return res.body as unknown as object;
   }
