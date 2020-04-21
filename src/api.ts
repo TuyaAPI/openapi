@@ -37,7 +37,13 @@ class OpenAPI {
       hooks: {
         beforeRequest: [
           async options => {
-            if (this.isTokenExpired() && !options.url.toString().includes('token')) {
+            let isTokenUrl: boolean = options.url.toString().includes('token');
+
+            if (this.tokenAccess === '' && !isTokenUrl) {
+              await this.getToken();
+            }
+
+            if (this.isTokenExpired() && !isTokenUrl) {
               await this.refreshToken();
             }
 
@@ -82,11 +88,11 @@ class OpenAPI {
   }
 
   // Authorization methods
-  isTokenExpired(): boolean {
+  private isTokenExpired(): boolean {
     return new Date().getTime() > this.tokenExpiresAt.getTime();
   }
 
-  async getToken(): Promise<void> {
+  private async getToken(): Promise<void> {
     const {body: {access_token, refresh_token, expire_time}} = await this._client.get('token?grant_type=1');
 
     this.tokenAccess = access_token;
@@ -94,7 +100,7 @@ class OpenAPI {
     this.tokenExpiresAt = new Date(new Date().getTime() + (expire_time * 1000));
   }
 
-  async refreshToken(): Promise<void> {
+  private async refreshToken(): Promise<void> {
     const {body: {access_token, refresh_token, expire_time}} = await this._client.get(`token/${this.tokenRefresh}`);
 
     this.tokenAccess = access_token;
@@ -166,6 +172,12 @@ class OpenAPI {
     }
 
     const res = await this._client.get('devices', {searchParams});
+
+    return res.body as unknown as object;
+  }
+
+  async getDeviceStatus(deviceId: string): Promise<object> {
+    const res = await this._client.get(`devices/${deviceId}/status`);
 
     return res.body as unknown as object;
   }
