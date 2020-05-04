@@ -13,12 +13,13 @@ class OpenAPI {
   public tokenRefresh: string;
   public tokenExpiresAt: Date;
   public schema: string;
+  public handleToken: boolean;
 
   private readonly _client: Got;
   private readonly _key: string;
   private readonly _secret: string;
 
-  constructor({key, secret, schema, region = 'us'}: {key: string; secret: string; schema: string; region: string}) {
+  constructor({key, secret, schema, region = 'us', handleToken = false}: {key: string; secret: string; schema: string; region: string, handleToken: boolean}) {
     this.tokenAccess = '';
     this.tokenRefresh = '';
     this.tokenExpiresAt = new Date();
@@ -26,6 +27,7 @@ class OpenAPI {
     this._key = key;
     this._secret = secret;
     this.schema = schema;
+    this.handleToken = handleToken;
 
     this._client = got.extend({
       responseType: 'json',
@@ -39,11 +41,11 @@ class OpenAPI {
           async options => {
             let isTokenUrl: boolean = options.url.toString().includes('token');
 
-            if (this.tokenAccess === '' && !isTokenUrl) {
+            if (!isTokenUrl && this.tokenAccess === '' && this.handleToken) {
               await this.getToken();
             }
 
-            if (this.isTokenExpired() && !isTokenUrl) {
+            if (!isTokenUrl && this.isTokenExpired()) {
               await this.refreshToken();
             }
 
@@ -53,7 +55,7 @@ class OpenAPI {
             // Caculate signature
             let sign = '';
 
-            if (this.tokenAccess === '') {
+            if (isTokenUrl) {
               sign = crypto
                 .createHmac('sha256', this._secret)
                 .update(this._key + now.toString())
@@ -88,11 +90,15 @@ class OpenAPI {
   }
 
   // Authorization methods
-  private isTokenExpired(): boolean {
+  isTokenExpired(): boolean {
     return new Date().getTime() > this.tokenExpiresAt.getTime();
   }
 
-  private async getToken(): Promise<void> {
+  async getToken(): Promise<void> {
+    if (this.handleToken) {
+      throw new HandleTokenError()
+    }
+
     const {body: {access_token, refresh_token, expire_time}} = await this._client.get('token?grant_type=1');
 
     this.tokenAccess = access_token;
@@ -100,7 +106,7 @@ class OpenAPI {
     this.tokenExpiresAt = new Date(new Date().getTime() + (expire_time * 1000));
   }
 
-  private async refreshToken(): Promise<void> {
+  async refreshToken(): Promise<void> {
     const {body: {access_token, refresh_token, expire_time}} = await this._client.get(`token/${this.tokenRefresh}`);
 
     this.tokenAccess = access_token;
@@ -180,6 +186,12 @@ class OpenAPI {
     const res = await this._client.get(`devices/${deviceId}/status`);
 
     return res.body as unknown as object;
+  }
+}
+
+class HandleTokenError extends Error {
+  constructor() {
+    super('Token acquisition is automatically handled.');
   }
 }
 
