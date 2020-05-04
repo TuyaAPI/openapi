@@ -19,7 +19,7 @@ class OpenAPI {
   private readonly _key: string;
   private readonly _secret: string;
 
-  constructor({key, secret, schema, region = 'us', handleToken = false}: {key: string; secret: string; schema: string; region: string, handleToken: boolean}) {
+  constructor({key, secret, schema, region = 'us', handleToken = false}: {key: string; secret: string; schema: string; region: string; handleToken: boolean}) {
     this.tokenAccess = '';
     this.tokenRefresh = '';
     this.tokenExpiresAt = new Date();
@@ -39,7 +39,7 @@ class OpenAPI {
       hooks: {
         beforeRequest: [
           async options => {
-            let isTokenUrl: boolean = options.url.toString().includes('token');
+            const isTokenUrl: boolean = options.url.toString().includes('token');
 
             if (!isTokenUrl && this.tokenAccess === '' && this.handleToken) {
               await this.getToken();
@@ -96,7 +96,7 @@ class OpenAPI {
 
   async getToken(): Promise<void> {
     if (this.handleToken) {
-      throw new HandleTokenError()
+      throw new HandleTokenError();
     }
 
     const {body: {access_token, refresh_token, expire_time}} = await this._client.get('token?grant_type=1');
