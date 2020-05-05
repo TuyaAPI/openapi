@@ -13,12 +13,13 @@ class OpenAPI {
   public tokenRefresh: string;
   public tokenExpiresAt: Date;
   public schema: string;
+  public handleToken: boolean;
 
   private readonly _client: Got;
   private readonly _key: string;
   private readonly _secret: string;
 
-  constructor({key, secret, schema, region = 'us'}: {key: string; secret: string; schema: string; region: string}) {
+  constructor({key, secret, schema, region = 'us', handleToken = false}: {key: string; secret: string; schema: string; region: string; handleToken: boolean}) {
     this.tokenAccess = '';
     this.tokenRefresh = '';
     this.tokenExpiresAt = new Date();
@@ -26,6 +27,7 @@ class OpenAPI {
     this._key = key;
     this._secret = secret;
     this.schema = schema;
+    this.handleToken = handleToken;
 
     this._client = got.extend({
       responseType: 'json',
@@ -37,7 +39,13 @@ class OpenAPI {
       hooks: {
         beforeRequest: [
           async options => {
-            if (this.isTokenExpired() && !options.url.toString().includes('token')) {
+            const isTokenUrl: boolean = options.url.toString().includes('token');
+
+            if (!isTokenUrl && this.tokenAccess === '' && this.handleToken) {
+              await this.getToken();
+            }
+
+            if (!isTokenUrl && this.isTokenExpired()) {
               await this.refreshToken();
             }
 
@@ -47,7 +55,7 @@ class OpenAPI {
             // Caculate signature
             let sign = '';
 
-            if (this.tokenAccess === '') {
+            if (isTokenUrl) {
               sign = crypto
                 .createHmac('sha256', this._secret)
                 .update(this._key + now.toString())
@@ -87,6 +95,10 @@ class OpenAPI {
   }
 
   async getToken(): Promise<void> {
+    if (this.handleToken) {
+      throw new HandleTokenError();
+    }
+
     const {body: {access_token, refresh_token, expire_time}} = await this._client.get('token?grant_type=1');
 
     this.tokenAccess = access_token;
@@ -168,6 +180,18 @@ class OpenAPI {
     const res = await this._client.get('devices', {searchParams});
 
     return res.body as unknown as object;
+  }
+
+  async getDeviceStatus(deviceId: string): Promise<object> {
+    const res = await this._client.get(`devices/${deviceId}/status`);
+
+    return res.body as unknown as object;
+  }
+}
+
+class HandleTokenError extends Error {
+  constructor() {
+    super('Token acquisition is automatically handled.');
   }
 }
 
