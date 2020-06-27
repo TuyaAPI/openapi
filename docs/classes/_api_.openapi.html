@@ -93,6 +93,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_api_.openapi.html#_client" class="tsd-kind-icon">_client</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_api_.openapi.html#_key" class="tsd-kind-icon">_key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-not-exported"><a href="_api_.openapi.html#_secret" class="tsd-kind-icon">_secret</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#handletoken" class="tsd-kind-icon">handle<wbr>Token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#schema" class="tsd-kind-icon">schema</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#tokenaccess" class="tsd-kind-icon">token<wbr>Access</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#tokenexpiresat" class="tsd-kind-icon">token<wbr>Expires<wbr>At</a></li>
@@ -102,9 +103,12 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getdevice" class="tsd-kind-icon">get<wbr>Device</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getdevicestatus" class="tsd-kind-icon">get<wbr>Device<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getdevicetoken" class="tsd-kind-icon">get<wbr>Device<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getdevices" class="tsd-kind-icon">get<wbr>Devices</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getdevicesbytoken" class="tsd-kind-icon">get<wbr>Devices<wbr>ByToken</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getdevicesbyuser" class="tsd-kind-icon">get<wbr>Devices<wbr>ByUser</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#getusers" class="tsd-kind-icon">get<wbr>Users</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="_api_.openapi.html#istokenexpired" class="tsd-kind-icon">is<wbr>Token<wbr>Expired</a></li>
@@ -121,20 +125,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>OpenAPI<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>region<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_api_.openapi.html" class="tsd-signature-type">OpenAPI</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>OpenAPI<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>handleToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>region<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_api_.openapi.html" class="tsd-signature-type">OpenAPI</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L19">api.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L20">src/api.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>region<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>handleToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>region<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>handle<wbr>Token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
 										<li class="tsd-parameter">
 											<h5>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 										</li>
@@ -163,7 +170,7 @@
 					<div class="tsd-signature tsd-kind-icon">_client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Got</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L17">api.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L18">src/api.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +180,7 @@
 					<div class="tsd-signature tsd-kind-icon">_key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L18">api.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L19">src/api.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +190,17 @@
 					<div class="tsd-signature tsd-kind-icon">_secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L19">api.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L20">src/api.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+					<a name="handletoken" class="tsd-anchor"></a>
+					<h3>handle<wbr>Token</h3>
+					<div class="tsd-signature tsd-kind-icon">handle<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L16">src/api.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -193,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L15">api.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L15">src/api.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +220,7 @@
 					<div class="tsd-signature tsd-kind-icon">token<wbr>Access<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L12">api.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L12">src/api.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,7 +230,7 @@
 					<div class="tsd-signature tsd-kind-icon">token<wbr>Expires<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L14">api.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L14">src/api.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -223,13 +240,59 @@
 					<div class="tsd-signature tsd-kind-icon">token<wbr>Refresh<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L13">api.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L13">src/api.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getdevice" class="tsd-anchor"></a>
+					<h3>get<wbr>Device</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Device<span class="tsd-signature-symbol">(</span>deviceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L191">src/api.ts:191</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>deviceId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getdevicestatus" class="tsd-anchor"></a>
+					<h3>get<wbr>Device<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Device<wbr>Status<span class="tsd-signature-symbol">(</span>deviceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L197">src/api.ts:197</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>deviceId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 					<a name="getdevicetoken" class="tsd-anchor"></a>
 					<h3>get<wbr>Device<wbr>Token</h3>
@@ -240,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L140">api.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L152">src/api.ts:152</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -271,7 +334,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L157">api.ts:157</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L175">src/api.ts:175</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -305,13 +368,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L151">api.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L163">src/api.ts:163</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>token: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getdevicesbyuser" class="tsd-anchor"></a>
+					<h3>get<wbr>Devices<wbr>ByUser</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Devices<wbr>ByUser<span class="tsd-signature-symbol">(</span>uid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L169">src/api.ts:169</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uid: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -328,7 +414,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L89">api.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L97">src/api.ts:97</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -345,7 +431,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L129">api.ts:129</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L141">src/api.ts:141</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -376,7 +462,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L85">api.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L93">src/api.ts:93</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -393,7 +479,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L106">api.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L118">src/api.ts:118</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -433,7 +519,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/3d268f7/src/api.ts#L97">api.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/TuyaAPI/openapi/blob/163425a/src/api.ts#L109">src/api.ts:109</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -455,6 +541,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_api_.handletokenerror.html" class="tsd-kind-icon">Handle<wbr>Token<wbr>Error</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
@@ -473,6 +562,9 @@
 								<a href="_api_.openapi.html#_secret" class="tsd-kind-icon">_secret</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_api_.openapi.html#handletoken" class="tsd-kind-icon">handle<wbr>Token</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
 								<a href="_api_.openapi.html#schema" class="tsd-kind-icon">schema</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
@@ -485,6 +577,12 @@
 								<a href="_api_.openapi.html#tokenrefresh" class="tsd-kind-icon">token<wbr>Refresh</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_api_.openapi.html#getdevice" class="tsd-kind-icon">get<wbr>Device</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_api_.openapi.html#getdevicestatus" class="tsd-kind-icon">get<wbr>Device<wbr>Status</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="_api_.openapi.html#getdevicetoken" class="tsd-kind-icon">get<wbr>Device<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
@@ -492,6 +590,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="_api_.openapi.html#getdevicesbytoken" class="tsd-kind-icon">get<wbr>Devices<wbr>ByToken</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="_api_.openapi.html#getdevicesbyuser" class="tsd-kind-icon">get<wbr>Devices<wbr>ByUser</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="_api_.openapi.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a>

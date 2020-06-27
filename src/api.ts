@@ -166,6 +166,12 @@ class OpenAPI {
     return res.body as unknown as object;
   }
 
+  async getDevicesByUser(uid: string): Promise<object> {
+    const res = await this._client.get(`users/${uid}/devices`);
+
+    return res.body as unknown as object;
+  }
+
   async getDevices({ids, pageNumber = 0, pageSize = 100}: {ids?: string[]; pageNumber: number; pageSize: number} = {pageNumber: 0, pageSize: 100}): Promise<object> {
     const searchParams: any = {
       schema: this.schema,
@@ -178,6 +184,12 @@ class OpenAPI {
     }
 
     const res = await this._client.get('devices', {searchParams});
+
+    return res.body as unknown as object;
+  }
+
+  async getDevice(deviceId: string): Promise<object> {
+    const res = await this._client.get(`devices/${deviceId}`);
 
     return res.body as unknown as object;
   }
