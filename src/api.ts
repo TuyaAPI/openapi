@@ -196,8 +196,8 @@ class OpenAPI {
 
   async changeDeviceName(deviceId: string, name: string): Promise<object> {
     const res = await this._client.put(`devices/${deviceId}`, {
-      json: { name }
-	  })
+      json: {name}
+    });
 
     return res.body as unknown as object;
   }
