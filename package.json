@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "🚪 a wrapper for Tuya's OpenAPI",
   "main": "dist/api.js",
+  "types": "dist/api.d.ts",
   "files": [
     "dist/"
   ],
