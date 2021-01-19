@@ -8,7 +8,7 @@ interface TuyaResponse {
   result: object;
 }
 
-class OpenAPI {
+export class OpenAPI {
   public tokenAccess: string;
   public tokenRefresh: string;
   public tokenExpiresAt: Date;
