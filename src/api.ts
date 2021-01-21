@@ -194,6 +194,14 @@ export class OpenAPI {
     return res.body as unknown as object;
   }
 
+  async changeDeviceName(deviceId: string, name: string): Promise<object> {
+    const res = await this._client.put(`devices/${deviceId}`, {
+      json: {name}
+    });
+
+    return res.body as unknown as object;
+  }
+
   async getDeviceStatus(deviceId: string): Promise<object> {
     const res = await this._client.get(`devices/${deviceId}/status`);
 
