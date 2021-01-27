@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@tuyapi/openapi</title>
+	<title>DevicesResponse | @tuyapi/openapi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@tuyapi/openapi</a>
+					<a href="../index.html" class="title">@tuyapi/openapi</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,81 +53,131 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_responses_.html">&quot;responses&quot;</a>
+				</li>
+				<li>
+					<a href="_responses_.devicesresponse.html">DevicesResponse</a>
 				</li>
 			</ul>
-			<h1>@tuyapi/openapi</h1>
+			<h1>Interface DevicesResponse</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<a href="#a-typescript-wrapper-for-tuya39s-a-hrefhttpsdocstuyacomeniotopen-apiquick-startsolution-overviewopenapia" id="a-typescript-wrapper-for-tuya39s-a-hrefhttpsdocstuyacomeniotopen-apiquick-startsolution-overviewopenapia" style="color: inherit; text-decoration: none;">
-					<h1>A TypeScript wrapper for Tuya&#39;s <a href="https://docs.tuya.com/en/iot/open-api/quick-start/solution-overview">OpenAPI</a></h1>
-				</a>
-				<p><a href="https://github.com/xojs/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg" alt="XO code style"></a> <a href="https://travis-ci.com/TuyaAPI/openapi"><img src="https://travis-ci.com/TuyaAPI/openapi.svg?branch=master" alt="Build Status"></a></p>
-				<a href="#why" id="why" style="color: inherit; text-decoration: none;">
-					<h2>Why?</h2>
-				</a>
-				<p>There is another package called <code>@tuyapi/cloud</code>.  Why does this one exist?</p>
-				<p>The other package deals with Tuya&#39;s &#39;mobile&#39; API, which has limited usefulness as Tuya seems to be phasing it out.</p>
-				<p>This package instead uses their &#39;OpenAPI&#39;, the solution that they recommend third-party applications use.</p>
-				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-					<h2>Installation</h2>
-				</a>
-				<p><code>npm i @tuyapi/openapi</code></p>
-				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
-					<h2>Example Usage</h2>
-				</a>
-				<p>(The <code>schema</code> value is your unique app ID from the Tuya console.)</p>
-				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> OpenAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@tuyapi/openapi'</span>);
-
-<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> OpenAPI({<span class="hljs-attr">key</span>: <span class="hljs-string">'10101010'</span>, <span class="hljs-attr">secret</span>: <span class="hljs-string">'1010101010'</span>, <span class="hljs-attr">schema</span>: <span class="hljs-string">'10101010'</span>});
-
-<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
-  <span class="hljs-comment">// Must be called before any other operations to get auth token</span>
-  <span class="hljs-keyword">await</span> api.getToken();
-
-  <span class="hljs-keyword">const</span> uid = <span class="hljs-keyword">await</span> api.putUser({
-    <span class="hljs-attr">countryCode</span>: <span class="hljs-string">'1'</span>,
-    <span class="hljs-attr">username</span>: <span class="hljs-string">'6124136341'</span>,
-    <span class="hljs-attr">password</span>: <span class="hljs-string">'c7fb2740c5fc45660d9e4ed765a479fa'</span>,
-    <span class="hljs-attr">usernameType</span>: <span class="hljs-number">1</span>});
-
-  <span class="hljs-built_in">console</span>.log(uid);
-
-  <span class="hljs-keyword">const</span> token = <span class="hljs-keyword">await</span> api.getDeviceToken({uid, <span class="hljs-attr">timezone</span>: <span class="hljs-string">'America/Chicago'</span>});
-
-  <span class="hljs-built_in">console</span>.log(token);
-
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> api.getDevicesByToken(<span class="hljs-string">'EkjQjlbo'</span>));
-})();</code></pre>
-				<a href="#a-hrefhttpstuyaapigithubioopenapidocsa" id="a-hrefhttpstuyaapigithubioopenapidocsa" style="color: inherit; text-decoration: none;">
-					<h2><a href="https://tuyaapi.github.io/openapi/">Docs</a></h2>
-				</a>
-			</div>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">DevicesResponse</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_responses_.devicesresponse.html#devices" class="tsd-kind-icon">devices</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_responses_.devicesresponse.html#last_id" class="tsd-kind-icon">last_<wbr>id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_responses_.devicesresponse.html#total" class="tsd-kind-icon">total</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="devices" class="tsd-anchor"></a>
+					<h3>devices</h3>
+					<div class="tsd-signature tsd-kind-icon">devices<span class="tsd-signature-symbol">:</span> <a href="_device_.device.html" class="tsd-signature-type">Device</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/milo526/openapi/blob/e736479/src/responses.ts#L52">src/responses.ts:52</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="last_id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> last_<wbr>id</h3>
+					<div class="tsd-signature tsd-kind-icon">last_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/milo526/openapi/blob/e736479/src/responses.ts#L53">src/responses.ts:53</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="total" class="tsd-anchor"></a>
+					<h3>total</h3>
+					<div class="tsd-signature tsd-kind-icon">total<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/milo526/openapi/blob/e736479/src/responses.ts#L51">src/responses.ts:51</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_api_.html">&quot;api&quot;</a>
+						<a href="../modules/_api_.html">&quot;api&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_device_.html">&quot;device&quot;</a>
+						<a href="../modules/_device_.html">&quot;device&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_responses_.html">&quot;responses&quot;</a>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_responses_.html">&quot;responses&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_responses_.devicetokenresponse.html" class="tsd-kind-icon">Device<wbr>Token<wbr>Response</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_responses_.devicesresponse.html" class="tsd-kind-icon">Devices<wbr>Response</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_responses_.devicesresponse.html#devices" class="tsd-kind-icon">devices</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_responses_.devicesresponse.html#last_id" class="tsd-kind-icon">last_<wbr>id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_responses_.devicesresponse.html#total" class="tsd-kind-icon">total</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_responses_.pairingresultresponse.html" class="tsd-kind-icon">Pairing<wbr>Result<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_responses_.tokenresponse.html" class="tsd-kind-icon">Token<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_responses_.tuyaresponse.html" class="tsd-kind-icon">Tuya<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_responses_.usersresponse.html" class="tsd-kind-icon">Users<wbr>Response</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -197,7 +247,7 @@
 	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
