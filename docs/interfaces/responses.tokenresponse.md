@@ -22,7 +22,7 @@
 
 • **access\_token**: *string*
 
-Defined in: [responses.ts:11](https://github.com/TuyaAPI/openapi/blob/a0d0e58/src/responses.ts#L11)
+Defined in: [responses.ts:11](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/responses.ts#L11)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **expire\_time**: *number*
 
-Defined in: [responses.ts:13](https://github.com/TuyaAPI/openapi/blob/a0d0e58/src/responses.ts#L13)
+Defined in: [responses.ts:13](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/responses.ts#L13)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **refresh\_token**: *string*
 
-Defined in: [responses.ts:12](https://github.com/TuyaAPI/openapi/blob/a0d0e58/src/responses.ts#L12)
+Defined in: [responses.ts:12](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/responses.ts#L12)
