@@ -85,7 +85,7 @@ export class OpenAPI {
               throw new Error(body.msg);
             }
 
-            response.body = body;
+            response.body = body.result;
 
             return response;
           }

@@ -39,7 +39,7 @@
 
 • **active\_time**: *number*
 
-Defined in: [device.ts:21](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L21)
+Defined in: [device.ts:21](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L21)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • `Optional` **biz\_type**: *undefined* \| *number*
 
-Defined in: [device.ts:24](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L24)
+Defined in: [device.ts:24](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L24)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **category**: *string*
 
-Defined in: [device.ts:10](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L10)
+Defined in: [device.ts:10](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L10)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **create\_time**: *number*
 
-Defined in: [device.ts:19](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L19)
+Defined in: [device.ts:19](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L19)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • `Optional` **icon**: *undefined* \| *string*
 
-Defined in: [device.ts:25](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L25)
+Defined in: [device.ts:25](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L25)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [device.ts:7](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L7)
+Defined in: [device.ts:7](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L7)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 • **ip**: *string*
 
-Defined in: [device.ts:17](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L17)
+Defined in: [device.ts:17](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L17)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 • **local\_key**: *string*
 
-Defined in: [device.ts:9](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L9)
+Defined in: [device.ts:9](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L9)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 • `Optional` **model**: *undefined* \| *string*
 
-Defined in: [device.ts:26](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L26)
+Defined in: [device.ts:26](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L26)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [device.ts:16](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L16)
+Defined in: [device.ts:16](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L16)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 • **online**: *boolean*
 
-Defined in: [device.ts:15](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L15)
+Defined in: [device.ts:15](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L15)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 • **owner\_id**: *string*
 
-Defined in: [device.ts:14](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L14)
+Defined in: [device.ts:14](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L14)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 • **product\_id**: *string*
 
-Defined in: [device.ts:11](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L11)
+Defined in: [device.ts:11](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L11)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 • `Optional` **product\_name**: *undefined* \| *string*
 
-Defined in: [device.ts:27](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L27)
+Defined in: [device.ts:27](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L27)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 • **status**: [*Status*](device.status.md)<*string*, *unknown*\>[]
 
-Defined in: [device.ts:22](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L22)
+Defined in: [device.ts:22](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L22)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 • **sub**: *boolean*
 
-Defined in: [device.ts:12](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L12)
+Defined in: [device.ts:12](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L12)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 • **time\_zone**: *string*
 
-Defined in: [device.ts:18](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L18)
+Defined in: [device.ts:18](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L18)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 • **uid**: *string*
 
-Defined in: [device.ts:8](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L8)
+Defined in: [device.ts:8](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L8)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 • **update\_time**: *string*
 
-Defined in: [device.ts:20](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L20)
+Defined in: [device.ts:20](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L20)
 
 ___
 
@@ -191,4 +191,4 @@ ___
 
 • **uuid**: *string*
 
-Defined in: [device.ts:13](https://github.com/TuyaAPI/openapi/blob/cd8f3c7/src/device.ts#L13)
+Defined in: [device.ts:13](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L13)
