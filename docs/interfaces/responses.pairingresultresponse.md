@@ -21,7 +21,7 @@
 
 • **errorDevices**: { `category`: *string* ; `device_id`: *string* ; `name`: *string* ; `product_id`: *string*  }[]
 
-Defined in: [responses.ts:36](https://github.com/TuyaAPI/openapi/blob/1100068/src/responses.ts#L36)
+Defined in: [responses.ts:36](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L36)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 • **successDevices**: { `code`: *string* ; `device_id`: *string* ; `msg`: *string* ; `name`: *string*  }[]
 
-Defined in: [responses.ts:42](https://github.com/TuyaAPI/openapi/blob/1100068/src/responses.ts#L42)
+Defined in: [responses.ts:42](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L42)

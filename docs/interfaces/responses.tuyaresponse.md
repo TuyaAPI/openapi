@@ -29,7 +29,7 @@ Name | Type |
 
 • **msg**: *string*
 
-Defined in: [responses.ts:4](https://github.com/TuyaAPI/openapi/blob/1100068/src/responses.ts#L4)
+Defined in: [responses.ts:4](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L4)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **result**: T
 
-Defined in: [responses.ts:7](https://github.com/TuyaAPI/openapi/blob/1100068/src/responses.ts#L7)
+Defined in: [responses.ts:7](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L7)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 • **success**: *boolean*
 
-Defined in: [responses.ts:6](https://github.com/TuyaAPI/openapi/blob/1100068/src/responses.ts#L6)
+Defined in: [responses.ts:6](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L6)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 • **t**: *number*
 
-Defined in: [responses.ts:5](https://github.com/TuyaAPI/openapi/blob/1100068/src/responses.ts#L5)
+Defined in: [responses.ts:5](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L5)

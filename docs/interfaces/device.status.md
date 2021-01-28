@@ -28,7 +28,7 @@ Name | Default |
 
 • **code**: TCode
 
-Defined in: [device.ts:2](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L2)
+Defined in: [device.ts:2](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/device.ts#L2)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **value**: TValue
 
-Defined in: [device.ts:3](https://github.com/TuyaAPI/openapi/blob/1100068/src/device.ts#L3)
+Defined in: [device.ts:3](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/device.ts#L3)
