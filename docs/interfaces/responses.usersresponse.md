@@ -12,17 +12,17 @@
 
 ### Properties
 
-- [has\_mode](responses.usersresponse.md#has_mode)
+- [has\_more](responses.usersresponse.md#has_more)
 - [list](responses.usersresponse.md#list)
 - [total](responses.usersresponse.md#total)
 
 ## Properties
 
-### has\_mode
+### has\_more
 
-• **has\_mode**: *boolean*
+• **has\_more**: *boolean*
 
-Defined in: [responses.ts:17](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L17)
+Defined in: [responses.ts:17](https://github.com/TuyaAPI/openapi/blob/fba2391/src/responses.ts#L17)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **list**: { `create_time`: *number* ; `email`: *string* ; `uid`: *string* ; `update_time`: *number* ; `username`: *string*  }[]
 
-Defined in: [responses.ts:18](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L18)
+Defined in: [responses.ts:18](https://github.com/TuyaAPI/openapi/blob/fba2391/src/responses.ts#L18)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **total**: *number*
 
-Defined in: [responses.ts:25](https://github.com/TuyaAPI/openapi/blob/06f5abb/src/responses.ts#L25)
+Defined in: [responses.ts:25](https://github.com/TuyaAPI/openapi/blob/fba2391/src/responses.ts#L25)
