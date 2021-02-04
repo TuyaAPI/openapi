@@ -14,7 +14,7 @@ export interface TokenResponse {
 }
 
 export interface UsersResponse {
-  has_mode: boolean;
+  has_more: boolean;
   list: Array<{
     create_time: number;
     email: string;
