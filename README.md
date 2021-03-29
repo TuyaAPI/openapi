@@ -29,8 +29,8 @@ const api = new OpenAPI({key: '10101010', secret: '1010101010', schema: '1010101
 
   const uid = await api.putUser({
     countryCode: '1',
-    username: '6124136341',
-    password: 'c7fb2740c5fc45660d9e4ed765a479fa',
+    username: 'your-username',
+    password: 'your-password',
     usernameType: 1});
 
   console.log(uid);
