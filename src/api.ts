@@ -201,6 +201,12 @@ export class OpenAPI {
 
     return response.body;
   }
+
+  async getSubDevicesOfZigbeeGateway(deviceId: string): Promise<Device> {
+    const response = await this._client.get<Device>(`devices/${deviceId}/sub-devices`);
+
+    return response.body;
+  }
 }
 
 class HandleTokenError extends Error {
