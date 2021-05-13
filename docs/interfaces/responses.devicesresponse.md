@@ -22,7 +22,7 @@
 
 • **devices**: [*Device*](device.device-1.md)[]
 
-Defined in: [responses.ts:52](https://github.com/TuyaAPI/openapi/blob/b273228/src/responses.ts#L52)
+Defined in: [responses.ts:52](https://github.com/TuyaAPI/openapi/blob/862f9a5/src/responses.ts#L52)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • `Optional` **last\_id**: *undefined* \| *string*
 
-Defined in: [responses.ts:53](https://github.com/TuyaAPI/openapi/blob/b273228/src/responses.ts#L53)
+Defined in: [responses.ts:53](https://github.com/TuyaAPI/openapi/blob/862f9a5/src/responses.ts#L53)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **total**: *number*
 
-Defined in: [responses.ts:51](https://github.com/TuyaAPI/openapi/blob/b273228/src/responses.ts#L51)
+Defined in: [responses.ts:51](https://github.com/TuyaAPI/openapi/blob/862f9a5/src/responses.ts#L51)
