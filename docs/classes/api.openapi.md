@@ -33,6 +33,7 @@
 - [getDevices](api.openapi.md#getdevices)
 - [getDevicesByToken](api.openapi.md#getdevicesbytoken)
 - [getDevicesByUser](api.openapi.md#getdevicesbyuser)
+- [getSubDevicesOfZigbeeGateway](api.openapi.md#getsubdevicesofzigbeegateway)
 - [getToken](api.openapi.md#gettoken)
 - [getUsers](api.openapi.md#getusers)
 - [isTokenExpired](api.openapi.md#istokenexpired)
@@ -59,7 +60,7 @@ Name | Type |
 
 **Returns:** [*OpenAPI*](api.openapi.md)
 
-Defined in: [api.ts:25](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L25)
+Defined in: [api.ts:25](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L25)
 
 ## Properties
 
@@ -67,7 +68,7 @@ Defined in: [api.ts:25](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.
 
 • `Private` `Readonly` **\_client**: *Got*
 
-Defined in: [api.ts:23](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L23)
+Defined in: [api.ts:23](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L23)
 
 ___
 
@@ -75,7 +76,7 @@ ___
 
 • `Private` `Readonly` **\_key**: *string*
 
-Defined in: [api.ts:24](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L24)
+Defined in: [api.ts:24](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L24)
 
 ___
 
@@ -83,7 +84,7 @@ ___
 
 • `Private` `Readonly` **\_secret**: *string*
 
-Defined in: [api.ts:25](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L25)
+Defined in: [api.ts:25](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L25)
 
 ___
 
@@ -91,7 +92,7 @@ ___
 
 • **handleToken**: *boolean*
 
-Defined in: [api.ts:21](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L21)
+Defined in: [api.ts:21](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L21)
 
 ___
 
@@ -99,7 +100,7 @@ ___
 
 • **schema**: *string*
 
-Defined in: [api.ts:20](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L20)
+Defined in: [api.ts:20](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L20)
 
 ___
 
@@ -107,7 +108,7 @@ ___
 
 • **tokenAccess**: *string*
 
-Defined in: [api.ts:17](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L17)
+Defined in: [api.ts:17](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L17)
 
 ___
 
@@ -115,7 +116,7 @@ ___
 
 • **tokenExpiresAt**: Date
 
-Defined in: [api.ts:19](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L19)
+Defined in: [api.ts:19](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L19)
 
 ___
 
@@ -123,7 +124,7 @@ ___
 
 • **tokenRefresh**: *string*
 
-Defined in: [api.ts:18](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L18)
+Defined in: [api.ts:18](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L18)
 
 ## Methods
 
@@ -139,7 +140,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*Device*](../interfaces/device.device-1.md)\>
 
-Defined in: [api.ts:193](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L193)
+Defined in: [api.ts:193](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L193)
 
 ___
 
@@ -155,7 +156,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*Status*](../interfaces/device.status.md)<*string*, *unknown*\>[]\>
 
-Defined in: [api.ts:199](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L199)
+Defined in: [api.ts:199](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L199)
 
 ___
 
@@ -174,7 +175,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*DeviceTokenResponse*](../interfaces/responses.devicetokenresponse.md)\>
 
-Defined in: [api.ts:154](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L154)
+Defined in: [api.ts:154](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L154)
 
 ___
 
@@ -194,7 +195,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*DevicesResponse*](../interfaces/responses.devicesresponse.md)\>
 
-Defined in: [api.ts:177](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L177)
+Defined in: [api.ts:177](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L177)
 
 ___
 
@@ -210,7 +211,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*PairingResultResponse*](../interfaces/responses.pairingresultresponse.md)\>
 
-Defined in: [api.ts:165](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L165)
+Defined in: [api.ts:165](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L165)
 
 ___
 
@@ -226,7 +227,23 @@ Name | Type |
 
 **Returns:** *Promise*<[*Device*](../interfaces/device.device-1.md)[]\>
 
-Defined in: [api.ts:171](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L171)
+Defined in: [api.ts:171](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L171)
+
+___
+
+### getSubDevicesOfZigbeeGateway
+
+▸ **getSubDevicesOfZigbeeGateway**(`deviceId`: *string*): *Promise*<[*Device*](../interfaces/device.device-1.md)\>
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`deviceId` | *string* |
+
+**Returns:** *Promise*<[*Device*](../interfaces/device.device-1.md)\>
+
+Defined in: [api.ts:205](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L205)
 
 ___
 
@@ -236,7 +253,7 @@ ___
 
 **Returns:** *Promise*<*void*\>
 
-Defined in: [api.ts:102](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L102)
+Defined in: [api.ts:102](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L102)
 
 ___
 
@@ -255,7 +272,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*UsersResponse*](../interfaces/responses.usersresponse.md)\>
 
-Defined in: [api.ts:144](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L144)
+Defined in: [api.ts:144](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L144)
 
 ___
 
@@ -265,7 +282,7 @@ ___
 
 **Returns:** *boolean*
 
-Defined in: [api.ts:98](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L98)
+Defined in: [api.ts:98](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L98)
 
 ___
 
@@ -287,7 +304,7 @@ Name | Type |
 
 **Returns:** *Promise*<*string*\>
 
-Defined in: [api.ts:123](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L123)
+Defined in: [api.ts:123](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L123)
 
 ___
 
@@ -297,4 +314,4 @@ ___
 
 **Returns:** *Promise*<*void*\>
 
-Defined in: [api.ts:114](https://github.com/TuyaAPI/openapi/blob/fba2391/src/api.ts#L114)
+Defined in: [api.ts:114](https://github.com/TuyaAPI/openapi/blob/b273228/src/api.ts#L114)
