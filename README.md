@@ -1,3 +1,6 @@
+**This repository is now outdated and obsolete. Please use Tuya's [official wrapper](https://github.com/tuya/tuya-connector-nodejs) instead.**
+
+
 # A TypeScript wrapper for Tuya's [OpenAPI](https://docs.tuya.com/en/iot/open-api/quick-start/solution-overview)
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo) [![Build Status](https://travis-ci.com/TuyaAPI/openapi.svg?branch=master)](https://travis-ci.com/TuyaAPI/openapi)
